@@ -27,9 +27,13 @@ function resolveAlias(value, primitivesColors) {
 function hexToRgbTriplet(hex) {
   if (typeof hex !== 'string') return null;
   const cleaned = hex.trim().replace(/^#/, '');
-  const full = cleaned.length === 3
-    ? cleaned.split('').map((c) => c + c).join('')
-    : cleaned;
+  const full =
+    cleaned.length === 3
+      ? cleaned
+          .split('')
+          .map((c) => c + c)
+          .join('')
+      : cleaned;
 
   if (!/^[0-9a-fA-F]{6}$/.test(full)) return null;
 
