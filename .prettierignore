@@ -2,3 +2,10 @@ node_modules
 .next
 out
 dist
+
+# Vendored artifacts must remain byte-for-byte identical to shared@<tag>
+vendor
+
+# Repo metadata / generated output
+.loopwish
+coverage
