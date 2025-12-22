@@ -62,7 +62,7 @@ async function main() {
 
   const keys = Array.from(new Set([...Object.keys(light), ...Object.keys(dark)])).sort();
 
-  const renderBlock = (values) => {
+  const renderBlock = (values, indent) => {
     const lines = [];
     for (const key of keys) {
       const rawValue = values?.[key];
@@ -72,7 +72,7 @@ async function main() {
         // Skip unknown formats; keep generation resilient.
         continue;
       }
-      lines.push(`  ${semanticKeyToCssVar(key)}: ${rgb};`);
+      lines.push(`${indent}${semanticKeyToCssVar(key)}: ${rgb};`);
     }
     return lines.join('\n');
   };
@@ -83,12 +83,12 @@ async function main() {
 */
 
 :root {
-${renderBlock(light)}
+${renderBlock(light, '  ')}
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-${renderBlock(dark)}
+${renderBlock(dark, '    ')}
   }
 }
 `;
