@@ -1,0 +1,40 @@
+/* AUTO-GENERATED: do not edit by hand.
+   Source: vendor/shared/design-tokens/tokens.json
+   Command: npm run generate:tokens
+*/
+
+:root {
+  --lw-color-action-primary-bg: 93 173 226;
+  --lw-color-action-primary-fg: 255 255 255;
+  --lw-color-action-secondary-fg: 175 122 197;
+  --lw-color-border-default: 127 140 141;
+  --lw-color-border-focus: 175 122 197;
+  --lw-color-state-disabled: 127 140 141;
+  --lw-color-state-hover: 175 122 197;
+  --lw-color-state-pressed: 93 173 226;
+  --lw-color-surface-accent: 93 173 226;
+  --lw-color-surface-canvas: 255 255 255;
+  --lw-color-surface-elevated: 255 255 255;
+  --lw-color-text-on-accent: 255 255 255;
+  --lw-color-text-primary: 44 62 80;
+  --lw-color-text-secondary: 127 140 141;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lw-color-action-primary-bg: 93 173 226;
+    --lw-color-action-primary-fg: 255 255 255;
+    --lw-color-action-secondary-fg: 175 122 197;
+    --lw-color-border-default: 127 140 141;
+    --lw-color-border-focus: 175 122 197;
+    --lw-color-state-disabled: 127 140 141;
+    --lw-color-state-hover: 175 122 197;
+    --lw-color-state-pressed: 93 173 226;
+    --lw-color-surface-accent: 93 173 226;
+    --lw-color-surface-canvas: 255 255 255;
+    --lw-color-surface-elevated: 255 255 255;
+    --lw-color-text-on-accent: 255 255 255;
+    --lw-color-text-primary: 44 62 80;
+    --lw-color-text-secondary: 127 140 141;
+  }
+}

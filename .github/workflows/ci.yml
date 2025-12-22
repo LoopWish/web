@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify vendored shared artifacts (warn)
+        run: bash ./scripts/verify_shared_vendor.sh
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -19,6 +22,9 @@ jobs:
 
       - name: Install
         run: npm install
+
+      - name: Generate CSS tokens
+        run: npm run generate:tokens
 
       - name: Lint
         run: npm run lint
