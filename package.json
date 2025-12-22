@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "generate:tokens": "node scripts/generate_css_tokens.mjs",
+    "dev": "npm run generate:tokens && next dev",
+    "build": "npm run generate:tokens && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
